@@ -1,2 +1,2 @@
-## Starting Repo for MERN Stack
+# MERN Stack
 # soapybusiness
