@@ -1,7 +1,7 @@
-import {Segment} from 'semantic-ui-react';
+import { Segment } from 'semantic-ui-react';
 import CartItemList from '../components/Cart/CartItemList';
 import CartSummary from '../components/Cart/CartSummary';
-import {parseCookies} from 'nookies';
+import { parseCookies } from 'nookies';
 import axios from 'axios';
 import baseUrl from '../utils/baseUrl';
 
