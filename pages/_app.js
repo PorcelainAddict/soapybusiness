@@ -64,6 +64,7 @@ class MyApp extends App {
     return (
       <Layout {...pageProps}>
       <Component {...pageProps}/>
+
     </Layout>
     );
   }
