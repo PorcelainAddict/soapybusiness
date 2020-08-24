@@ -20,7 +20,7 @@ function AddProductToCart({user, productId}) {
     return () => {
       clearTimeout(timeout);
     }
-  }, [success])
+  }, [success]);
 
   async function handleAddProductToCart() {
     try {
