@@ -8,7 +8,7 @@ function CartItemList({ products, user }) {
     return products.map(p => ({
       childkey: p.product._id,
       header: (
-        <Item.Header as="a" onClick={() => router.push(`/product?_id={p.product._id}`)}>
+        <Item.Header as="a" onClick={() => router.push(`/product?_id=${p.product._id}`)}>
           {p.product.name}
         </Item.Header>
       ),
