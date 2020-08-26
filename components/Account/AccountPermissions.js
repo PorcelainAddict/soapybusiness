@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Header, Icon, Table, Checkbox } from 'semantic-ui-react'
 import baseUrl from '../../utils/baseUrl';
 import cookie from 'js-cookie';
+import formatDate from '../../utils/formatDate';
 
 
 function AccountPermissions() {
@@ -17,7 +18,7 @@ function AccountPermissions() {
     const token = cookie.get('token')
     const payload = { headers: { Authorization: token}}
     const response = await axios.get(url, payload)
-    console.log(response.data)
+    // console.log(response.data)
     setUsers(response.data)
   }
 
@@ -81,8 +82,8 @@ function UserPermission({ user }) {
       </Table.Cell>
       <Table.Cell>{user.name}</Table.Cell>
       <Table.Cell>{user.email}</Table.Cell>
-      <Table.Cell>{user.createdAt}</Table.Cell>
-      <Table.Cell>{user.updatedAt}</Table.Cell>
+      <Table.Cell>{formatDate(user.createdAt)}</Table.Cell>
+      <Table.Cell>{formatDate(user.updatedAt)}</Table.Cell>
       <Table.Cell>{admin ? "admin" : "user"}</Table.Cell>
     </Table.Row>
   )

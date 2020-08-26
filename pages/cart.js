@@ -10,7 +10,7 @@ import catchErrors from '../utils/catchErrors';
 
 function Cart({ products, user }) {
   const [cartProducts, setCartProducts] = React.useState(products)
-  console.log(products)
+  // console.log(products)
   const [success, setSuccess] = React.useState(false)
   const [loading, setLoading] = React.useState(false)
 
@@ -69,7 +69,7 @@ Cart.getInitialProps = async ctx => {
   const url = `${baseUrl}/api/cart`
   const payload = { headers: { Authorization: token }}
   const response = await axios.get(url, payload)
-  console.log(response.data)
+  // console.log(response.data)
   return { products: response.data }
 
 }
