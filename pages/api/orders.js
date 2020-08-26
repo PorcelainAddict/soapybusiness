@@ -10,7 +10,7 @@ export default async (req, res) => {
         const orders =  await Order.find({ user: userId})
         .sort({ createdAt: 'desc' })
         .populate({
-            path: 'products.product',
+            path: "products.product",
             model: "Product"
         })
         res.status(200).json({ orders })
